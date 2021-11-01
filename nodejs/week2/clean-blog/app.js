@@ -7,15 +7,19 @@ const Blog = require('./models/Blog');
 const BlogController = require('./controllers/BlogController')
 const PageController = require('./controllers/PageController')
 
-const port = 5000;
+const port = process.env.PORT || 5000;
 
 // EXPRESS START
 const app = express();
 
 // DB CONNECTION
-mongoose.connect('mongodb://localhost/cleanblog-test-db',{
+mongoose.connect('mongodb+srv://anil:q1W2e3R4+@cluster0.7m2pp.mongodb.net/blog-db?retryWrites=true&w=majority',{
     useNewUrlParser: true,
     useUnifiedTopology: true,
+}).then(()=>{
+    console.log("Success")
+}).catch((err)=>{
+    console.log(err)
 })
 
 // TEMPLATE ENGINE
