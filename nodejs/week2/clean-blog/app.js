@@ -4,6 +4,8 @@ const mongoose = require('mongoose');
 
 const ejs = require('ejs');
 const Blog = require('./models/Blog');
+const BlogController = require('./controllers/BlogController')
+const PageController = require('./controllers/PageController')
 
 const port = 5000;
 
@@ -28,52 +30,19 @@ app.use(methodOverride('_method',{
 }))
 
 // ROUTES
-app.get('/', async (req,res)=>{
-    const posts = await Blog.find({})
-    res.render("index",{
-        //posts: posts
-        posts
-    });
-})
-app.get('/about',(req,res)=>{
-    res.render("about");
-})
-app.get('/add',(req,res)=>{
-    res.render("add");
-})
+app.get('/', BlogController.getAllPosts)
+app.get('/about',PageController.getAboutPage)
+app.get('/add', PageController.getAddPage)
 
-app.get('/posts/:id', async (req,res)=>{
-    const post = await Blog.findById(req.params.id);
-    res.render("post",{
-        post
-    });
-})
-app.get('/posts/edit/:id', async (req,res)=>{
-    const post = await Blog.findOne({_id: req.params.id});
-    res.render("edit",{
-        post
-    });
-})
-app.put('/posts/:id', async (req,res)=>{
-    const post = await Blog.findOne({_id:req.params.id})
-    post.title = req.body.title;
-    post.message = req.body.message;
-    post.save();
+app.get('/posts/:id', BlogController.getPost)
+app.get('/posts/edit/:id', BlogController.editPost)
 
-    res.redirect(`/posts/${req.params.id}`);
-})
-
-app.delete('/posts/:id', async (req,res) =>{
-    await Blog.findByIdAndRemove(req.params.id)
-    res.redirect("/");
-    
-})
+app.post('/posts', BlogController.createPost)
+app.put('/posts/:id', BlogController.updatePost)
+app.delete('/posts/:id', BlogController.deletePost)
 
 
-app.post('/posts', async (req,res)=>{
-    await Blog.create(req.body);
-    res.redirect("/");
-})
+
 
 
 
