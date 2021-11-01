@@ -24,8 +24,12 @@ app.use(express.urlencoded({extended:true}))
 app.use(express.json())
 
 // ROUTES
-app.get('/',(req,res)=>{
-    res.render("index");
+app.get('/', async (req,res)=>{
+    const posts = await Blog.find({})
+    res.render("index",{
+        posts: posts
+        //posts
+    });
 })
 app.get('/about',(req,res)=>{
     res.render("about");
