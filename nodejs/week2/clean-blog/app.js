@@ -13,7 +13,8 @@ const port = process.env.PORT || 5000;
 const app = express();
 
 // DB CONNECTION
-mongoose.connect('mongodb+srv://anil:q1W2e3R4+@cluster0.7m2pp.mongodb.net/blog-db?retryWrites=true&w=majority',{
+
+mongoose.connect(`mongodb+srv://anil:${process.env.DBKEY}@cluster0.7m2pp.mongodb.net/blog-db?retryWrites=true&w=majority`,{
     useNewUrlParser: true,
     useUnifiedTopology: true,
 }).then(()=>{
