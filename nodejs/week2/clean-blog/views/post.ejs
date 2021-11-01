@@ -16,6 +16,15 @@
           <blockquote class="blockquote"><%= post.message %></blockquote>
 
         </div>
+        <div class="col-lg-4 col-md-2 mx-auto">
+          <div class="text-center">
+            <a href="/posts/edit/<%= post._id %>" class="btn btn-primary mb-4 tm-btn-animate tm-btn-download tm-icon-download"><span>Update Details</span></a>	
+          </div>	
+          <div class="text-center">
+            <a href="/posts/<%= post._id %>?_method=DELETE" class="btn btn-danger tm-btn-animate tm-btn-download tm-icon-download"
+              onclick="return confirm('ARE YOU SURE?')"><span>Delete Photo</span></a>	
+          </div>	
+        </div>
       </div>
     </div>
   </article>
