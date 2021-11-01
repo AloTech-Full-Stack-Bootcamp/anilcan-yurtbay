@@ -27,8 +27,8 @@ app.use(express.json())
 app.get('/', async (req,res)=>{
     const posts = await Blog.find({})
     res.render("index",{
-        posts: posts
-        //posts
+        //posts: posts
+        posts
     });
 })
 app.get('/about',(req,res)=>{
@@ -38,6 +38,12 @@ app.get('/add',(req,res)=>{
     res.render("add");
 })
 
+app.get('/posts/:id', async (req,res)=>{
+    const post = await Blog.findById(req.params.id);
+    res.render("post",{
+        post
+    });
+})
 app.post('/posts', async (req,res)=>{
     await Blog.create(req.body);
     res.redirect("/");
