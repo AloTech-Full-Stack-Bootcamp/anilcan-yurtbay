@@ -12,6 +12,7 @@
   "dependencies": {
     "@koa/router": "^10.1.1",
     "abortcontroller-polyfill": "^1.7.3",
+    "ejs": "^3.1.6",
     "express": "^4.17.1",
     "jsdom": "^18.0.0",
     "koa": "^2.13.4",
@@ -19,5 +20,8 @@
     "koa-logger": "^3.2.1",
     "koa-views": "^7.0.1",
     "node-fetch": "^3.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.14"
   }
 }
