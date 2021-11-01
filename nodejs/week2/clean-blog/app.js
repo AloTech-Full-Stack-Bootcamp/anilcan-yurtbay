@@ -11,8 +11,13 @@ app.use(express.static('public'))
 
 // ROUTES
 app.get('/',(req,res)=>{
-    
     res.render("index");
+})
+app.get('/about',(req,res)=>{
+    res.render("about");
+})
+app.get('/add',(req,res)=>{
+    res.render("add");
 })
 
 
