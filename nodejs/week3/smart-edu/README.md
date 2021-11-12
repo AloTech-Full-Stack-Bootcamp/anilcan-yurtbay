@@ -1,4 +1,4 @@
-# Clean Blog Project
+# Smart Edu Project
 
 Bu repo [Patika](https://www.patika.dev) , AloTech FullStack Bootcamp NodeJs Eğitiminde Verilen 3. Hafta ödevidir.
 
