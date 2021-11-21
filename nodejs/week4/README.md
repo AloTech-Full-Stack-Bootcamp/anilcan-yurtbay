@@ -11,7 +11,7 @@ https://codesandbox.io/s/magical-silence-vsob4?file=/src/index.js:1784-2411
 Projenin canlı örneği:
 
 ```sh
-https://codesandbox.io/s/wispy-star-4vogx?file=/src/index.js
+https://codesandbox.io/s/solitary-wildflower-osx3v?file=/src/index.js
 ```
 
 ## Konsol Çıktısı:
