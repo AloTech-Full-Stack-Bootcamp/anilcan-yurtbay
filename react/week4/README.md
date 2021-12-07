@@ -22,7 +22,7 @@ https://codesandbox.io/s/solitary-wildflower-osx3v?file=/src/index.js
 ![img](./screenshots/after-finish-series.jpg)
 
 #### Test Passed
-![img](./screenshots/after-finish-series.jpg)
+![img](./screenshots/test-passed.jpg)
 
 ## Tech
 

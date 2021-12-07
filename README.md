@@ -8,11 +8,11 @@ Bu repo [Patika](https://www.patika.dev) , AloTech FullStack Bootcamp Eğitimi i
 -- [Hafta 1](https://github.com/AloTech-Full-Stack-Bootcamp/anilcan-yurtbay/tree/main/nodejs/week1) ✔️️ 
 -- [Hafta 2](https://github.com/AloTech-Full-Stack-Bootcamp/anilcan-yurtbay/tree/main/nodejs/week2) ✔️️ 
 -- [Hafta 3](https://github.com/AloTech-Full-Stack-Bootcamp/anilcan-yurtbay/tree/main/nodejs/week3) ✔️️ 
-##### REACT
+##### [REACT](https://github.com/AloTech-Full-Stack-Bootcamp/anilcan-yurtbay/tree/main/react)
 -- [Hafta 4](https://github.com/AloTech-Full-Stack-Bootcamp/anilcan-yurtbay/tree/main/react/week4) ✔️️ 
 -- [Hafta 5](https://github.com/AloTech-Full-Stack-Bootcamp/anilcan-yurtbay/tree/main/react/week5) ✔️️
 -- Hafta 6 ✔️️
-##### DJANGO
+##### [DJANGO](https://github.com/AloTech-Full-Stack-Bootcamp/anilcan-yurtbay/tree/main/django)
 -- [Hafta 7](https://github.com/AloTech-Full-Stack-Bootcamp/anilcan-yurtbay/tree/main/django/week7) ✔️️
 -- Hafta 8 ❌
 -- Hafta 9 ❌
