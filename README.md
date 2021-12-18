@@ -15,7 +15,7 @@ Bu repo [Patika](https://www.patika.dev) , AloTech FullStack Bootcamp Eğitimi i
 ##### [DJANGO](https://github.com/AloTech-Full-Stack-Bootcamp/anilcan-yurtbay/tree/main/django)
 -- [Hafta 7](https://github.com/AloTech-Full-Stack-Bootcamp/anilcan-yurtbay/tree/main/django/week7) ✔️️
 -- [Hafta 8](https://github.com/AloTech-Full-Stack-Bootcamp/anilcan-yurtbay/tree/main/django/week8) ✔️️
--- Hafta 9 ❌
+-- [Hafta 9](https://github.com/AloTech-Full-Stack-Bootcamp/anilcan-yurtbay/tree/main/django/week9) ✔️️
 
 ## Installation
 Öncelikle projeyi clonelayın. (https://github.com/AloTech-Full-Stack-Bootcamp/anilcan-yurtbay.git)
