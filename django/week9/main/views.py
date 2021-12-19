@@ -18,19 +18,31 @@ class PostViewSet(viewsets.ModelViewSet):
     serializer_class = PostSerializer
     permission_classes = [IsAuthenticated]
 
-    # post/:id/like
+    # posts/:id/like
     @action(detail=True, methods=['post'])
     def like(self, request, pk=None):
         post = self.get_object()
         user = request.user
         queryset = Like.objects.filter(post=post, user=user)
 
-        if len(queryset)!=0:
-            queryset.delete()
-            return Response({"message":"deleted"})
-        else:
+        if queryset.count()==0:
             queryset.create(post=post, user=user)
-            return Response({"message":"created"})
+            return Response({"message":"liked"})
+        else:
+            return Response({"message":"the post has already been liked"})
+
+    # posts/:id/unlike
+    @action(detail=True, methods=["post"])
+    def unlike(self, request, pk=None):
+        post = self.get_object()
+        user = request.user
+        queryset = Like.objects.filter(post=post, user=user)
+        print(queryset.count())
+        if queryset.count()!=0:
+            queryset.delete()
+            return Response({"message":"disliked"})
+        else:
+            return Response({"message":"the post has not already been liked"})
 
 class LikeViewSet(viewsets.ModelViewSet):
     queryset = Like.objects.all()
